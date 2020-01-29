@@ -1,0 +1,77 @@
+<html> 
+   <head> 
+       <style>
+           table 
+           {
+                width: 60%;
+               height: 50%;
+            }
+           .title
+           {
+               width: 60%;
+               background-color:darkblue;
+               color: aliceblue;
+           }
+           button,input 
+           {
+                display: block;
+                width: 100%;
+                background-color:antiquewhite;
+                font-size: 50px;
+                cursor: pointer;
+                text-align: center;
+          }
+       </style>
+      <script> 
+         function print(a) 
+         { 
+             document.getElementById("result").value+=a ;
+         } 
+           
+         function ans() 
+         { 
+             let x = document.getElementById("result").value 
+             let y = eval(x) 
+             document.getElementById("result").value = y ;
+         } 
+           
+         function clr() 
+         { 
+             document.getElementById("result").value = "" ;
+         } 
+      </script> 
+ 
+   <body> 
+      <h1 class = "title">My Calculator</h1> 
+      <table border="1"> 
+         <tr> 
+            <td colspan="3"><input type="text" id="result"/></td> 
+            <td><input type="button" value="c" onclick="clr()"/> </td> 
+         </tr> 
+         <tr> 
+            <td><input type="button" value="1" onclick="print('1')"></td> 
+            <td><input type="button" value="2" onclick="print('2')"/> </td> 
+            <td><input type="button" value="3" onclick="print('3')"/> </td> 
+            <td><input type="button" value="/" onclick="print('/')"/> </td> 
+         </tr> 
+         <tr> 
+            <td><input type="button" value="4" onclick="print('4')"/> </td> 
+            <td><input type="button" value="5" onclick="print('5')"/> </td> 
+            <td><input type="button" value="6" onclick="print('6')"/> </td> 
+            <td><input type="button" value="-" onclick="print('-')"/> </td> 
+         </tr> 
+         <tr> 
+            <td><input type="button" value="7" onclick="print('7')"/> </td> 
+            <td><input type="button" value="8" onclick="print('8')"/> </td> 
+            <td><input type="button" value="9" onclick="print('9')"/> </td> 
+            <td><input type="button" value="+" onclick="print('+')"/> </td> 
+         </tr> 
+         <tr> 
+            <td><input type="button" value="." onclick="print('.')"/> </td> 
+            <td><input type="button" value="0" onclick="print('0')"/> </td> 
+            <td><input type="button" value="=" onclick="ans()"/> </td> 
+            <td><input type="button" value="*" onclick="print('*')"/> </td> 
+         </tr> 
+      </table> 
+   </body> 
+</html> 
